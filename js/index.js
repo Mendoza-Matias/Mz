@@ -6,11 +6,11 @@
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
     // ========== VARIABLES (en español como solicitado) ==========
-    const barraLateral = document.querySelector('.sidebar');
-    const contenidoPrincipal = document.querySelector('.contenido');
+    const barraNavegacion = document.querySelector('.navbar');
+    const menuNavegacion = document.querySelector('.menu');
     const botonAlternar = document.querySelector('.toggle-btn');
     const botonVolverArriba = document.getElementById('btn-volver-arriba');
-    const enlacesNavegacion = document.querySelectorAll('.sidebar ul li a');
+    const enlacesNavegacion = document.querySelectorAll('.menu li a');
     const secciones = document.querySelectorAll('section');
     const elementosAnimados = document.querySelectorAll('[data-aos]');
     const formularioContacto = document.querySelector('.formulario-contacto');
@@ -18,12 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========== FUNCIONES ==========
     
     /**
-     * Alterna la navegación lateral entre abierta y cerrada
+     * Alterna el menú de navegación en dispositivos móviles
      */
     function alternarMenu() {
-        // Agregar o quitar la clase 'active' para expandir/contraer el menú
-        barraLateral.classList.toggle('active');
-        contenidoPrincipal.classList.toggle('active');
+        // Agregar o quitar la clase 'active' para mostrar/ocultar el menú
+        menuNavegacion.classList.toggle('active');
     }
     
     /**
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 
                 // Agregar la clase 'active' al enlace correspondiente a esta sección
-                const enlaceActivo = document.querySelector(`.sidebar ul li a[href="#${idSeccion}"]`);
+                const enlaceActivo = document.querySelector(`.menu li a[href="#${idSeccion}"]`);
                 if (enlaceActivo) {
                     enlaceActivo.classList.add('active');
                 }
@@ -159,14 +158,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const destino = document.querySelector(this.getAttribute('href'));
             
             // Si el menú está abierto en móviles, cerrarlo
-            if (window.innerWidth <= 576 && barraLateral.classList.contains('active')) {
+            if (window.innerWidth <= 768 && menuNavegacion.classList.contains('active')) {
                 alternarMenu();
             }
+            
+            // Calcular el offset para tener en cuenta la altura de la navbar fija
+            const alturaNavbar = barraNavegacion.offsetHeight;
             
             // Desplazar suavemente a la sección de destino
             if (destino) {
                 window.scrollTo({
-                    top: destino.offsetTop,
+                    top: destino.offsetTop - alturaNavbar,
                     behavior: 'smooth'
                 });
             }
