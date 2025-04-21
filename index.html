@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navegación Lateral -->
-    <nav class="sidebar">
-        <div class="logo">
-            <i class="fas fa-circle-nodes"></i>
-            <span>Axios</span>
+    <!-- Navegación Superior -->
+    <nav class="navbar">
+        <div class="contenedor nav-contenedor">
+            <div class="logo">
+                <i class="fas fa-circle-nodes"></i>
+                <span>Axios</span>
+            </div>
+            <div class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+                <li><a href="#nosotros"><i class="fas fa-users"></i><span>Nosotros</span></a></li>
+                <li><a href="#servicios"><i class="fas fa-code"></i><span>Servicios</span></a></li>
+                <li><a href="#precios"><i class="fas fa-dollar-sign"></i><span>Precios</span></a></li>
+                <li><a href="#tecnologias"><i class="fas fa-microchip"></i><span>Tecnologías</span></a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i><span>Contacto</span></a></li>
+            </ul>
         </div>
-        <div class="toggle-btn">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul>
-            <li><a href="#inicio"><i class="fas fa-home"></i><span>Inicio</span></a></li>
-            <li><a href="#nosotros"><i class="fas fa-users"></i><span>Nosotros</span></a></li>
-            <li><a href="#servicios"><i class="fas fa-code"></i><span>Servicios</span></a></li>
-            <li><a href="#precios"><i class="fas fa-dollar-sign"></i><span>Precios</span></a></li>
-            <li><a href="#tecnologias"><i class="fas fa-microchip"></i><span>Tecnologías</span></a></li>
-            <li><a href="#contacto"><i class="fas fa-envelope"></i><span>Contacto</span></a></li>
-        </ul>
     </nav>
 
     <!-- Contenido Principal -->
     <main class="contenido">
+        <!-- Espaciador para la navbar fija -->
+        <div class="navbar-spacer"></div>
         <!-- Sección Inicio -->
         <section id="inicio" class="seccion">
             <div class="hero">
