@@ -1,51 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mz</title>
-    <link rel="icon" href="./content/image/logo.png">
+    <title>Axios - Agencia Digital</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+    <!-- Navegación Lateral -->
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fas fa-circle-nodes"></i>
+            <span>Axios</span>
+        </div>
+        <div class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+            <li><a href="#nosotros"><i class="fas fa-users"></i><span>Nosotros</span></a></li>
+            <li><a href="#servicios"><i class="fas fa-code"></i><span>Servicios</span></a></li>
+            <li><a href="#precios"><i class="fas fa-dollar-sign"></i><span>Precios</span></a></li>
+            <li><a href="#tecnologias"><i class="fas fa-microchip"></i><span>Tecnologías</span></a></li>
+            <li><a href="#contacto"><i class="fas fa-envelope"></i><span>Contacto</span></a></li>
+        </ul>
+    </nav>
 
-    <body>
-        <div class="container">
-            <h1>Página en Proceso</h1>
-            <p class="subtitle">Estamos trabajando para traerte algo increíble</p>
-
-            <div class="progress-bar">
-                <div class="progress"></div>
+    <!-- Contenido Principal -->
+    <main class="contenido">
+        <!-- Sección Inicio -->
+        <section id="inicio" class="seccion">
+            <div class="hero">
+                <div class="hero-contenido">
+                    <h1>Creando <span class="resaltado">marcas</span> y <span class="resaltado">soluciones</span> digitales</h1>
+                    <p>Diseñamos experiencias digitales excepcionales, aplicaciones, sitios web móviles para startups y empresas.</p>
+                    <button class="btn-primario">Descubrir más <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="desplazador">
+                    <span>Desliza hacia abajo</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
+            <div class="servicios-rapidos">
+                <div class="servicio-item">Desarrollo Web</div>
+                <div class="separador"></div>
+                <div class="servicio-item">Diseño UI/UX</div>
+                <div class="separador"></div>
+                <div class="servicio-item">Desarrollo de Apps</div>
+                <div class="separador"></div>
+                <div class="servicio-item">Ideas Innovadoras</div>
+                <div class="separador"></div>
+                <div class="servicio-item">Agencia de Desarrollo</div>
+            </div>
+        </section>
 
-            <p>Tiempo en desarrollo:</p>
-            <div class="counter-container">
-                <div class="counter-box">
-                    <div id="months" class="counter-number">0</div>
-                    <div class="counter-label">Meses</div>
-                </div>
-                <div class="counter-box">
-                    <div id="days" class="counter-number">0</div>
-                    <div class="counter-label">Días</div>
-                </div>
-                <div class="counter-box">
-                    <div id="hours" class="counter-number">0</div>
-                    <div class="counter-label">Horas</div>
+        <!-- Sección Sobre Nosotros -->
+        <section id="nosotros" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Sobre Nosotros</h2>
+                <div class="nosotros-grid">
+                    <div class="nosotros-texto">
+                        <h3>Problemas de agencias digitales y sus mejores soluciones</h3>
+                        <p>Creamos experiencias digitales creativas que sostienen negocios y sus objetivos comerciales. Nuestro equipo de expertos resuelve problemas de agencias digitales incluyendo marketing, estrategia y más.</p>
+                        <p>Contamos con un equipo multidisciplinario que entiende los desafíos de la presión por entregar de alta calidad.</p>
+                        <button class="btn-secundario">Saber más <i class="fas fa-arrow-circle-right"></i></button>
+                    </div>
+                    <div class="nosotros-imagen">
+                        <img src="/api/placeholder/500/300" alt="Equipo trabajando">
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <p class="message">¡Gracias por tu paciencia! Pronto tendremos novedades.</p>
+        <!-- Sección Servicios -->
+        <section id="servicios" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestros Servicios</h2>
+                <div class="intro-servicios">
+                    <h3>Explora servicios únicos de agencia digital</h3>
+                    <p>Creamos experiencias digitales excepcionales que sostienen negocios y sus objetivos. Nuestro enfoque hacia la innovación permite a nuestros clientes destacar.</p>
+                </div>
+                <div class="servicios-grid">
+                    <div class="tarjeta-servicio" data-aos="fade-up">
+                        <div class="icono-servicio">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4>Diseño y Desarrollo Web</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Desarrollo de Sitios Web</li>
+                            <li><i class="fas fa-check"></i> Desarrollo API</li>
+                            <li><i class="fas fa-check"></i> Diseño UX/UI</li>
+                        </ul>
+                    </div>
+                    <div class="tarjeta-servicio" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icono-servicio">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Optimización para Buscadores</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> SEO Técnico</li>
+                            <li><i class="fas fa-check"></i> Contenido Optimizado</li>
+                            <li><i class="fas fa-check"></i> Análisis de Competencia</li>
+                        </ul>
+                    </div>
+                    <div class="tarjeta-servicio" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icono-servicio">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Desarrollo de Apps Móviles</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Aplicaciones Nativas</li>
+                            <li><i class="fas fa-check"></i> Aplicaciones Híbridas</li>
+                            <li><i class="fas fa-check"></i> Interfaces Intuitivas</li>
+                        </ul>
+                    </div>
+                    <div class="tarjeta-servicio" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icono-servicio">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Consultoría de Estrategia Digital</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Análisis de Mercado</li>
+                            <li><i class="fas fa-check"></i> Plan de Implementación</li>
+                            <li><i class="fas fa-check"></i> Medición de Resultados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <div class="social-links">
-                <a target="_blank"
-                    href="https://mzdevs-be1af.web.app/?fbclid=PAZXh0bgNhZW0CMTEAAaezQyzdyiGEN3gM6BTQw2WSi3Tpn7ZSpBor5611g1bZMX5xVPNdJysJk2uDAA_aem_8R_L3pj2z29YVtjoHHR74Q">Antigua
-                    web</a>
-                <a target="_blank" href="https://www.instagram.com/mz.devs/?next=%2F">Instagram</a>
+        <!-- Sección Precios -->
+        <section id="precios" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Planes y Precios</h2>
+                <div class="precios-grid">
+                    <div class="tarjeta-precio" data-aos="zoom-in">
+                        <div class="cabecera-precio">
+                            <h3>Plan Básico</h3>
+                            <div class="precio">$999<span>/mes</span></div>
+                        </div>
+                        <ul class="caracteristicas">
+                            <li><i class="fas fa-check"></i> Sitio Web Responsive</li>
+                            <li><i class="fas fa-check"></i> 5 Páginas</li>
+                            <li><i class="fas fa-check"></i> SEO Básico</li>
+                            <li><i class="fas fa-check"></i> Soporte Mensual</li>
+                            <li class="no-incluido"><i class="fas fa-times"></i> Desarrollo a Medida</li>
+                            <li class="no-incluido"><i class="fas fa-times"></i> Aplicación Móvil</li>
+                        </ul>
+                        <button class="btn-precio">Elegir Plan</button>
+                    </div>
+                    <div class="tarjeta-precio destacado" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="etiqueta">Más Popular</div>
+                        <div class="cabecera-precio">
+                            <h3>Plan Profesional</h3>
+                            <div class="precio">$2,499<span>/mes</span></div>
+                        </div>
+                        <ul class="caracteristicas">
+                            <li><i class="fas fa-check"></i> Sitio Web Avanzado</li>
+                            <li><i class="fas fa-check"></i> 10 Páginas</li>
+                            <li><i class="fas fa-check"></i> SEO Completo</li>
+                            <li><i class="fas fa-check"></i> Soporte Semanal</li>
+                            <li><i class="fas fa-check"></i> Desarrollo a Medida</li>
+                            <li class="no-incluido"><i class="fas fa-times"></i> Aplicación Móvil</li>
+                        </ul>
+                        <button class="btn-precio destacado">Elegir Plan</button>
+                    </div>
+                    <div class="tarjeta-precio" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="cabecera-precio">
+                            <h3>Plan Empresarial</h3>
+                            <div class="precio">$4,999<span>/mes</span></div>
+                        </div>
+                        <ul class="caracteristicas">
+                            <li><i class="fas fa-check"></i> Sitio Web Premium</li>
+                            <li><i class="fas fa-check"></i> Páginas Ilimitadas</li>
+                            <li><i class="fas fa-check"></i> SEO Avanzado</li>
+                            <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                            <li><i class="fas fa-check"></i> Desarrollo a Medida</li>
+                            <li><i class="fas fa-check"></i> Aplicación Móvil</li>
+                        </ul>
+                        <button class="btn-precio">Elegir Plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tecnologías -->
+        <section id="tecnologias" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Tecnologías que Utilizamos</h2>
+                <div class="tecnologias-grid">
+                    <div class="tecnologia-item" data-aos="flip-up">
+                        <i class="fab fa-html5"></i>
+                        <h4>HTML5</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="50">
+                        <i class="fab fa-css3-alt"></i>
+                        <h4>CSS3</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="100">
+                        <i class="fab fa-js"></i>
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="150">
+                        <i class="fab fa-react"></i>
+                        <h4>React</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="200">
+                        <i class="fab fa-node-js"></i>
+                        <h4>Node.js</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="250">
+                        <i class="fab fa-angular"></i>
+                        <h4>Angular</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="300">
+                        <i class="fab fa-vue"></i>
+                        <h4>Vue.js</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="350">
+                        <i class="fab fa-php"></i>
+                        <h4>PHP</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="400">
+                        <i class="fab fa-python"></i>
+                        <h4>Python</h4>
+                    </div>
+                    <div class="tecnologia-item" data-aos="flip-up" data-aos-delay="450">
+                        <i class="fab fa-aws"></i>
+                        <h4>AWS</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contáctanos</h2>
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <h3>¿Listo para empezar tu proyecto?</h3>
+                        <p>Nuestro equipo está listo para ayudarte a hacer realidad tu visión digital. Ponte en contacto con nosotros hoy mismo.</p>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Tecnología 123, Ciudad Digital</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 234 567 890</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@axios-digital.com</span>
+                        </div>
+                        <div class="redes-sociales">
+                            <a href="#" class="red-social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="red-social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <form class="formulario-contacto">
+                        <div class="campo-formulario">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre completo">
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" placeholder="Tu correo electrónico">
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" placeholder="Tu número de teléfono">
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="servicio">Servicio de Interés</label>
+                            <select id="servicio">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="web">Desarrollo Web</option>
+                                <option value="app">Desarrollo de Apps</option>
+                                <option value="seo">SEO</option>
+                                <option value="estrategia">Estrategia Digital</option>
+                            </select>
+                        </div>
+                        <div class="campo-formulario completo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" placeholder="Cuéntanos sobre tu proyecto"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primario">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <i class="fas fa-circle-nodes"></i>
+                    <span>Axios</span>
+                    <p>Creando experiencias digitales excepcionales desde 2010.</p>
+                </div>
+                <div class="footer-enlaces">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-servicios">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                        <li><a href="#servicios">Aplicaciones Móviles</a></li>
+                        <li><a href="#servicios">SEO</a></li>
+                        <li><a href="#servicios">Estrategia Digital</a></li>
+                        <li><a href="#servicios">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Suscríbete a nuestro Newsletter</h4>
+                    <p>Recibe las últimas noticias y actualizaciones.</p>
+                    <form class="form-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Axios Digital Agency. Todos los derechos reservados.</p>
             </div>
         </div>
-        <script src="./js/index.js"></script>
-    </body>
+    </footer>
 
+    <!-- Botón de volver arriba -->
+    <button id="btn-volver-arriba" class="btn-volver-arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+</body>
 </html>
