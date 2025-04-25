@@ -1,7 +1,7 @@
 /* Variables y estilos generales */
 :root {
-    --primary-color: #c5ff00;
-    --dark-color: #1a1a1a;
+    --primary-color: #00ff00;
+    --dark-color: #0a0a0a;
     --light-color: #f9f9f9;
     --accent-color: #333;
     --gray-color: #e0e0e0;
@@ -80,7 +80,7 @@ body {
 }
 
 .btn-primario:hover {
-    background-color: #a6d600;
+    background-color: var(--gray-color);
     transform: translateY(-3px);
     box-shadow: var(--shadow);
 }
@@ -517,7 +517,7 @@ body {
 
 .tecnologia-item i {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: var(--dark-color);
     margin-bottom: 15px;
 }
 
