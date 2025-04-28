@@ -65,9 +65,48 @@ const prices = [
     }
 ];
 
+const tecnologies = [
+    {
+        id: 1,
+        icon: 'fab fa-java',
+        name: 'Java'
+    },
+    {
+        id: 2,
+        icon: 'fab fa-angular',
+        name: 'Angular'
+    },
+    {
+        id: 3,
+        icon: 'fab fa-html5',
+        name: 'Html'
+    },
+    {
+        id: 4,
+        icon: 'fab fa-node',
+        name: 'Node'
+    },
+    {
+        id: 5,
+        icon: 'fab fa-react',
+        name: 'React'
+    },
+    {
+        id: 6,
+        icon: 'fab fa-python',
+        name: 'Python'
+    },
+    {
+        id: 7,
+        icon: 'fa-brands fa-golang',
+        name: 'Golang'
+    }
+]
+
 document.addEventListener('DOMContentLoaded', () => {
     const serviciosContainer = document.getElementById('servicios-container');
     const preciosContainer = document.getElementById('precios-container');
+    const tecnologiasContainer = document.getElementById('tecnologias-container')
 
     const crearElementoConHTML = (tag, className, innerHTML = '') => {
         const el = document.createElement(tag);
@@ -116,8 +155,20 @@ document.addEventListener('DOMContentLoaded', () => {
             preciosContainer.append(tarjeta);
         });
     };
+    const cargarTecnologias = () => {
+        tecnologies.forEach(tec => {
+            const tarjeta = crearElementoConHTML('div', 'tecnologia-item')
 
+            const contenido = `
+                        <i class="${tec.icon}"></i>
+                        <h4>${tec.name}</h4>`
+
+            tarjeta.innerHTML = `${contenido}`
+            tecnologiasContainer.append(tarjeta);
+        })
+    }
     cargarServicios();
     cargarPrecios();
+    cargarTecnologias();
 });
 
